@@ -50,7 +50,7 @@ calcDerivative - Calculates the derivative of a function at a point. Non-symboli
 automatic differentiation or symbolic methods later on.
 
 calcError - Calculates the error after each itertation of the relevant algorithms. This function will be heavily
-customized and overriden depending on the use case. 
+customized and overridden depending on the use case. 
 
 
 
