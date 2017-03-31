@@ -4,7 +4,7 @@ MODULES
 -------
 
 This is a tentative outline of the required modeuls for the package. Obviously, they are subject to change.
-Related dependencies are marked accordingly.
+Related dependencies are marked accordingly. Please update this file as you see fit.
 
 Text Parsing / Input Recognition
 --------------------------------
