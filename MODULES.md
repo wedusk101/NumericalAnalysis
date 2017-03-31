@@ -32,14 +32,10 @@ Numerical Integration
 Trapezoid Rule(Depends on calcError)
 Simpson's one-third(Depends on calcError)
 
-Transcendental Numbers
-----------------------
+Constants and Transcendental Numbers 
+------------------------------------
 
 Taylor and Maclaurin Expansions (Depends on calcDerivative)
-
-Constants
----------
-
 Important mathematical constants could be used from the java Math class.
 e.g. e, pi, phi, tao.
 
