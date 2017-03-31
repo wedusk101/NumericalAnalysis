@@ -40,6 +40,15 @@ Taylor and Maclaurin Expansions (Depends on calcDerivative)
 Important mathematical constants could be used from the java Math class.
 e.g. e, pi, phi, tao.
 
+Differential Equations
+----------------------
+
+Initially we intend on implementing ODE only. Later on we hope to extend the
+functionality to PDE.For ODEs we will have
+
+Euler's Method
+Runge-Kutta 
+
 Implementation Functions
 ------------------------
 
