@@ -19,6 +19,7 @@ Root Finding Methods
 --------------------
 
 Newton - Raphson (Depends on calcDerivative, calcError)
+Secant Method(calcError)
 Regula Falsi(Depends on calcError)
 
 Systems of Linear Equations
@@ -47,6 +48,13 @@ automatic differentiation or symbolic methods later on.
 
 calcError - Calculates the error after each itertation of the relevant algorithms. This function will be heavily
 customized and overridden depending on the use case. 
+
+Testing Modules
+---------------
+
+We intend on implementing two different testing modules. One automated testing module and one black box testing function.
+This module is extremely important using which we will considering various scenarios and make sure that the package 
+is robust and reliable.
 
 
 
