@@ -2,7 +2,7 @@
 
 calcDerivative - Calculates the derivative of a function at a point. Non-symbolic as of now. We could consider 
 automatic differentiation or symbolic methods later on. One method which I am currently researching involves passing 
-a method as a parameter to this class/function. As we know, we don't have access to poinmters to functions here.
+a method as a parameter to this class/function. As we know, we don't have access to pointers to functions here.
 We could use something like a Callable interface, although I suggest a different approach. Please let me know what you
 guys think about it. So the basic structure of the method that I am working on right now is this.
 
