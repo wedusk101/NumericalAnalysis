@@ -6,7 +6,7 @@ a method as a parameter to this class/function. As we know, we don't have access
 We could use something like a Callable interface, although I suggest a different approach. Please let me know what you
 guys think about it. So the basic structure of the method that I am working on right now is this.
 
-public double calcDerivative(String func, String op, double var, double val.);
+public double calcDerivative(String func, String op, double var, double val);
 
 This is the prototype of the method. Instead of passing the function method as a parameter, we parse the original
 expression and generate string inputs for the calcDerivative method.For e.g. to find out the derivative of say a trigonometric
