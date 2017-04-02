@@ -49,6 +49,14 @@ functionality to PDE.For ODEs we will have
 Euler's Method
 Runge-Kutta 
 
+Interpolation Methods
+---------------------
+
+Linear Interpolation
+Lagrangian Interpolation
+Newton's Interpolation
+Forward / Backward Interpolation(Depends on calcFiniteDifference)
+
 Implementation Functions
 ------------------------
 
@@ -57,6 +65,10 @@ automatic differentiation or symbolic methods later on.
 
 calcError - Calculates the error after each itertation of the relevant algorithms. This function will be heavily
 customized and overridden depending on the use case. 
+
+calcFiniteDifference - This method is used to calculate the finite difference table for the
+interpolation modules. Since the finite difference is basically the discrete analof of the
+derivative, this method could also be used for the calcDerivative method.
 
 Testing Modules
 ---------------
