@@ -1,11 +1,11 @@
 rough codes for various numerical methods for a pre determined polynomial function in C programming language has been uploaded by me to my repository if in need of help you can take code from their and port it in java
 link - https://github.com/ArihantKumarSeraogi/Numerical-Analysis-via-C
 Rules to be strictly followed-
-1> methods should be STATIC 
-2> do not use error values such as 0.0001 in case of bisection or raphson or regula falsi etc use the EPSILON notation
-3> code body for the method should be STRICTLY INDENTED AND COMMENTED ..meaning the comments shoud make the code somewhat self explanatory in nature.
-4> the METHODS WILL CATCH OBJECTS of polynomial class and return a answer value of double type Note: the polynomial class has already been defined and uploaded 
-5> the ERROR TERM for the method should be tracked and calculated
+
+1> do not use error values such as 0.0001 in case of bisection or raphson or regula falsi etc use the EPSILON notation
+2> code body for the method should be STRICTLY INDENTED AND COMMENTED ..meaning the comments shoud make the code somewhat self explanatory in nature.
+3> the METHODS WILL CATCH OBJECTS of polynomial class and return a answer value of double type Note: the polynomial class has already been defined and uploaded 
+4> the ERROR TERM for the method should be tracked and calculated
 
 
 (methods for which raw code has been uploaded and upon which work should begin immediately)
