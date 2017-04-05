@@ -6,6 +6,7 @@ Rules to be strictly followed-
 2> code body for the method should be STRICTLY INDENTED AND COMMENTED ..meaning the comments shoud make the code somewhat self explanatory in nature.
 3> the METHODS WILL CATCH OBJECTS of polynomial class and return a answer value of double type Note: the polynomial class has already been defined and uploaded 
 4> the ERROR TERM for the method should be tracked and calculated
+5> Please remember that the methods MUST BE STATIC so they can be called directly by importing the package.
 
 
 (methods for which raw code has been uploaded and upon which work should begin immediately)
