@@ -8,6 +8,7 @@ Rules to be strictly followed-
 4> the ERROR TERM for the method should be tracked and calculated
 5> Please remember that the methods MUST BE STATIC so they can be called directly by importing the package.
 6> <b>DATE OF SUBMISSION IS APRIL 10th, 2017.</b>
+7> Please do not forget to close the handles to your scanner object at the very end of your program where you're sure you will not be accessing stdin/System.in anymore.
 
 
 (methods for which raw code has been uploaded and upon which work should begin immediately)
