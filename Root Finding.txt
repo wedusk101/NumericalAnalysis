@@ -1,0 +1,14 @@
+#NumericalAnalysis
+
+Applies to the following Root-FInding Methods
+---------------------------------------------
+
+Newton - Raphson (Depends on calcDerivative, calcError)
+Secant Method(calcError)
+Bisection Method
+Regula Falsi(Depends on calcError)
+
+
+For folks working on root finding methods, please note the special cases where the code should check whether real roots exist 
+for the given polynomial. For instance, for bisection method, make sure the function changes sign on the interval given by 
+the user. In case the initial test cases fail, the method should return an appropriate message and stop the operation.
