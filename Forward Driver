@@ -1,0 +1,76 @@
+import static MyIO.IO.*;
+import NewtonInterpolation.*;
+
+class InvalidNodeException extends Exception
+{
+	
+}
+
+class InvalidStepLengthException extends Exception
+{
+	
+}
+
+public class ForwardDriver 
+{
+	public static void main(String[] args) 
+	{
+		double x[],y[][],pivot=0,h;
+		int n;
+		boolean check=true;
+		P("\nPlease enter number of nodes...\n");
+		n=I();
+		x=new double[n];
+		y=new double[n][n];
+		
+		for(int loop=0;loop<n;++loop)
+		{
+			P("\nEnter the value of x"+loop+": ");
+			x[loop]=D();
+			P("\nEnter the value of y"+loop+": ");
+			y[0][loop]=D();
+		}
+		h=x[1]-x[0];
+		P("\nEnter x for finding f(x): ");
+		pivot=D();
+		try
+		{
+			if(pivot<x[0] || pivot>x[n-1])
+			{
+				check=false;
+				InvalidNodeException ine=new InvalidNodeException();
+				throw ine;
+			}
+		}
+		catch(InvalidNodeException obj)
+		{
+			PO(obj);
+		}
+		try
+		{
+			for(int loop=0;loop<n-1;++loop)
+			{
+				if((x[loop+1]-x[loop])!=h)
+				{
+					check=false;
+					InvalidStepLengthException iine=new InvalidStepLengthException();
+					throw iine;
+				}
+			}
+		}
+		catch(InvalidStepLengthException obj1)
+		{
+			PO(obj1);
+		}
+		if(check)
+		{
+			Forward forward=new Forward(x,y,n,pivot);
+			forward.forwardCal();
+		}
+		else
+		{
+			P("\nINHERENT ERROR.\n");
+		}
+	}
+
+}
