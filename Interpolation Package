@@ -1,0 +1,105 @@
+package NewtonInterpolation;
+import static MyIO.IO.*;
+
+class InvalidPhaseException extends Exception
+{
+	
+}
+public class Forward 
+{
+	double x[];
+	double y[][];
+	int n;
+	double pivot;
+	public Forward(double x[],double y[][],int n,double pivot)
+	{
+		this.x=new double[n];
+		this.y=new double[n][n];
+		this.x=x;
+		this.y=y;
+		this.n=n;
+		this.pivot=pivot;
+	}
+	public void differencesCal()
+	{
+		for(int loop1=1;loop1<n;++loop1)
+			for(int loop2=0;loop2<n-loop1;++loop2)
+				y[loop1][loop2]=y[loop1-1][loop2+1]-y[loop1-1][loop2];
+	}
+	public void showDifferences()
+	{
+		PSame("\n\n_____________________________________________\n\n");
+		PSame("\n x(i)\t y(i)\t y1(i)\t y2(i)\t y3(i)\t y4(i)");
+		PSame("\n\n_____________________________________________\n\n");
+		for(int loop1=0;loop1<n;++loop1)
+		{
+			PSame("\n "+x[loop1]);
+			for(int loop2=0;loop2<n-loop1;++loop2)
+			{
+				System.out.printf("   %.3f",y[loop2][loop1]);
+			}
+			PSame("\n");
+		}
+	}
+	int fact(int a)
+	{
+		int fac=1;
+		while(a!=0)
+		{
+			fac=fac*a;
+			--a;
+		}
+		
+		return fac;
+	}
+	public void forwardCal()
+	{
+		int i,f,k=0,m;
+		double u,sum=0,temp;
+		differencesCal();
+		
+		showDifferences();
+		
+		i=0;
+		do
+		{
+			if(x[i]<pivot && pivot<x[i+1])
+				k=1;
+			else
+				++i;
+		}
+		while(k!=1);
+
+		f=i;
+		u=(pivot-x[f])/(x[f+1]-x[f]);
+		try
+		{
+			if(u<0 || u>1)
+			{
+				InvalidPhaseException ipe=new InvalidPhaseException();
+				throw ipe;
+			}
+		}
+		catch(InvalidPhaseException obj2)
+		{
+			PO(obj2);
+			System.exit(1);
+		}
+		P("\n\n u="+u);
+		n=n-i+1;
+		sum=0;
+		for(int loop1=0;loop1<n;++loop1)
+		{
+			temp=1;
+			for(int loop2=0;loop2<i;++loop2)
+			{
+				temp=temp*(u-loop2);
+			}
+			m=fact(loop1);
+			sum=sum+temp*(y[i][f]/m);
+		}
+		P("\n\n f("+pivot+")="+sum+".");
+		
+		
+	}
+}
