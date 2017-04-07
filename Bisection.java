@@ -1,9 +1,11 @@
 import java.util.Scanner;
 class Bisection {
 	
+	static final double EPSILON = 0.000006;
+	
 	void CalcBisectionRoot()
 	{
-		 float interval1,interval2,root=0,k;
+		 double  interval1 = 0.0,interval2 = 0.0,root=0.0,k = 0;
 		 Scanner s=new Scanner(System.in);
 		
 		   
@@ -13,7 +15,7 @@ class Bisection {
 		   interval2=s.nextFloat();
 		   if((f(interval1)*f(interval2))<0)
 		   {
-			   while(Math.abs(interval1-interval2)>0.00001)
+			   while(Math.abs(interval1-interval2)>EPSILON)
 			   {
 				   root=(interval1+interval2)/2;
 				   k=f(root);
@@ -25,7 +27,7 @@ class Bisection {
 			   System.out.println("The Calculated Root Is::"+root);
 		   }
 		   else
-			   System.out.println("too many roots");
+			   System.out.println("No real roots on this interval. OPERATION ABORTED.");
 	}
 		   
 	float f(float x)
