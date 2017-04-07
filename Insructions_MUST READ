@@ -12,16 +12,21 @@ Rules to be strictly followed-
 
 <b>DATE OF SUBMISSION IS APRIL 10th, 2017.</b>
 
+pending
+{
+ bisection method- Subhobroto (task assigned on 4th april)
+ regula falsi method- Aranya &prachet (task assigned on 5th april)
+ newton raphson- 
+ // secant method- Amit das (task assigned on 5th april)
+ Gauss Jacobi- Swarnendu and Biswajit Nandy(task assigned on 5th april)
+ Gauss Seidel- Akash Gupta amd Gagandeep Singh (task assigned on 5th april)
+ Trapezoidal- Ankur (task assigned on 5th april)
+ Simpson 1/3rd- Chanchal (task assigned on 4th april) 
+ Euler- Souvik pal "Jerry" (task assigned on 5th april) 
+ Backward Interpolation- Vishal
+ }
 
-(methods for which raw code has been uploaded and upon which work should begin immediately)
-bisection method- Subhobroto (task assigned on 4th april)
-regula falsi method- Aranya &prachet (task assigned on 5th april)
-newton raphson- 
-// secant method- Amit das (task assigned on 5th april)
-Gauss Jacobi- Swarnendu and Biswajit Nandy(task assigned on 5th april)
-Gauss Seidel- Akash Gupta amd Gagandeep Singh (task assigned on 5th april)
-Trapezoidal- Ankur (task assigned on 5th april)
-Simpson 1/3rd- Chanchal (task assigned on 4th april) 
-Euler- Souvik pal "Jerry" (task assigned on 5th april)
-Forward Interpolation- Rohit Singh <initial code completed,integration and testing pending> 
-Backward Interpolation- Vishal
+
+
+
+Forward Interpolation- Rohit Singh <initial code completed,integration and testing pending>
