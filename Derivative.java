@@ -39,7 +39,11 @@ class Derivative
 			ddx = (Math.acos(val + EPSILON) - Math.acos(val)) / EPSILON;
 		} // end of basic trigonometric functions
 		
-				
+		else
+		{
+			System.out.println("Invalid Input! Operation aborted.");
+			System.exit(1);
+		}				
 		return ddx;
 	}
 }
