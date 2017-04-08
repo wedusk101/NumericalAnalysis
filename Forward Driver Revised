@@ -35,7 +35,7 @@ public class ForwardDriver
 		}
 		h=x[1]-x[0];  // calculating step-length
 		h=Double.parseDouble(String.format("%.1f",h));   // for some inputs the floating point representations can hamper the desires result; so setting precision for such floating point numbers
-		//System.out.println("\nh="+h);
+		
 		System.out.println("\nEnter x for finding f(x): ");
 		pivot=obj.nextDouble();   // accepting the point at which the functional value is required
 		try
