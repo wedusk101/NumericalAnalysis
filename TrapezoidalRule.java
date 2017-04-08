@@ -1,30 +1,30 @@
 import java.util.*;
 import java.math.*;
 
-public class TrapezoidalRule 
-{
-
-    static class Polynomial
-{
-	    private int[] coef;    // array of coefficients
-	    private int[] exp;     // array of exponents 
-	    int degree;            // highest power of the polynomial
+	class Polynomial
+	{
+	    int[] coef;    // array of coefficients
+	    int[] exp;     // array of exponents 
+	    int degree;    // highest power of the polynomial
 	    Scanner s=new Scanner(System.in);
 	    Polynomial(int degree)
 	    {
 	    	this.degree=degree;
-	    	int[] coef=new int[degree];
-	 	    int[] exp =new int[degree];
+	    	coef=new int[degree];
+	 	    exp =new int[degree];
 	 	    for(int index=0;index<degree;index++)
 	 	    {
-	 	    	System.out.println("Enter the coefficient");
+	 	    	System.out.println("Enter coefficient number " + (index + 1));
 	 	    	coef[index]=s.nextInt();
 	 	    	System.out.println("Enter the respective exponent");
 	 	    	exp[index] =s.nextInt();		
 	 	    }
 	    }
 	    
-}
+	}
+
+public class TrapezoidalRule 
+{
 
    static double f(double x,Polynomial p) {
        double sum=0;
@@ -47,7 +47,7 @@ public class TrapezoidalRule
    * Increase N for more precision.
    */
    static double integrateTrapezoid(double lower, double upper, int interval, Polynomial p) {
-      double h = (upper - lower) / interval;              // step size
+      double h = (upper - lower) / (double)interval;              // step size
       double sum = 0.5 * (f(lower,p) + f(upper,p));    //calculating 1st and last means y0 and yn
       for (int i = 1; i < interval; i++) 
       {
@@ -62,17 +62,18 @@ public class TrapezoidalRule
 
    // sample program
    public static void main(String[] args) {
-             Scanner s=new Scanner(System.in);       
+             Scanner in=new Scanner(System.in);       
        System.out.println("Enter the highest degree of polynomial");
-       int degree=s.nextInt();
+       int degree=in.nextInt();
        Polynomial p=new Polynomial(degree);
       double lower = 2;
       double upper = 7;
       System.out.println(integrateTrapezoid(lower, upper, 5,p));
+	  in.close();
    }
+}
    
 
-}
 
 
 
