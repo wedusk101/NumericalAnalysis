@@ -93,8 +93,7 @@ public class Forward
 			l=n;  // initializing accordingly
 		else 
 			n=l;    // initializing accordingly
-		/*System.out.println("\ni="+i);
-		System.out.println("\nn="+n);*/
+		
 		sum=0;      // initializing sum to its initial value
 		for(int loop1=0;loop1<n;++loop1)     // outer loop
 		{
