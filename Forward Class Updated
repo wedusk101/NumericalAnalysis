@@ -89,7 +89,7 @@ public class Forward
 		}
 		System.out.println("\n\n u="+u);     // Print phase
 		l=n-i+1;  // an attempt to avoid "noise-level"    
-		if(l>n)   // condition avoid StringIndexOutOfBoundsException
+		if(l>n)   // condition to avoid StringIndexOutOfBoundsException
 			l=n;  // initializing accordingly
 		else 
 			n=l;    // initializing accordingly
