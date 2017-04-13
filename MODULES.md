@@ -20,6 +20,7 @@ Root Finding Methods
 
 Newton - Raphson (Depends on calcDerivative, calcError)
 Secant Method(calcError)
+Bisection Method
 Regula Falsi(Depends on calcError)
 
 Systems of Linear Equations
@@ -67,7 +68,7 @@ calcError - Calculates the error after each itertation of the relevant algorithm
 customized and overridden depending on the use case. 
 
 calcFiniteDifference - This method is used to calculate the finite difference table for the
-interpolation modules. Since the finite difference is basically the discrete analof of the
+interpolation modules. Since the finite difference is basically the discrete analog of the
 derivative, this method could also be used for the calcDerivative method.
 
 Testing Modules
