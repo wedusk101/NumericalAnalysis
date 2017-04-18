@@ -18,10 +18,10 @@ functions. The values enclosed within # imply the differential over here followe
 Root Finding Methods
 --------------------
 
-Newton - Raphson (Depends on calcDerivative, calcError)
-Secant Method(calcError)
-Bisection Method
-Regula Falsi(Depends on calcError)
+Newton - Raphson (Depends on calcDerivative, calcError, Polynomial)
+Secant Method(Depends on calcError, Polynomial)
+Bisection Method(Depends on calcError, Polynomial)
+Regula Falsi(Depends on calcError, Polynomial)
 
 Systems of Linear Equations
 ---------------------------
@@ -31,8 +31,8 @@ Gauss-Siedel(Depends on calcError)
 Numerical Integration
 ---------------------
 
-Trapezoid Rule(Depends on calcError)
-Simpson's one-third(Depends on calcError)
+Trapezoid Rule(Depends on calcError, Polynomial)
+Simpson's one-third(Depends on calcError, Polynomial)
 
 Constants and Transcendental Numbers 
 ------------------------------------
@@ -70,6 +70,9 @@ customized and overridden depending on the use case.
 calcFiniteDifference - This method is used to calculate the finite difference table for the
 interpolation modules. Since the finite difference is basically the discrete analog of the
 derivative, this method could also be used for the calcDerivative method.
+
+Class Polynomial - This class is used for the creation of a polynomial object. It also contains a methos polyEval()
+used for calculating the value of a polynomial for a particular value of x.
 
 Testing Modules
 ---------------
