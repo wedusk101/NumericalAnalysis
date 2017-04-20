@@ -10,7 +10,7 @@ class RegularFalsiMethod extends Polynomial
     {
 	double  leftInterval = 0.0, rightInterval = 0.0, root = 0.0, k = 0.0, fb = 0.0 , fa=0.0;
 	Scanner in = new Scanner(System.in);
-	System.out.println("Enter the endpoisnts of the closed interval [a,b] :");		
+	System.out.println("Enter the endpoints of the closed interval [a,b] :");		
 	leftInterval = in.nextDouble();
 	rightInterval = in.nextDouble();
 	if((inputEval(leftInterval)*inputEval(rightInterval))<0) // tests if the function has at least one real root in the given interval
