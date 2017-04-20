@@ -2,7 +2,6 @@ package com.numerical;
 import java.util.Scanner; /*importing the Scanner class of the 'util' package to accept necessary inputs from the user*/
 
 
-
 class Backward
 {
     double x[];     // array to hold interpolating points
@@ -117,16 +116,16 @@ class Backward
 
 
 
-public class BackwardDriver 
+class BackwardDriver 
 {    
     public static void main(String[] args)     // start of main 
     {    
 	Scanner sc=new Scanner(System.in);   //creating object of the scanner class
-	/*Decalaration of array to store all the interpolationg points, and matrix to store differeence table*/
+	/*Declaration of array to store all the interpolating points, and matrix to store difference table*/
         double x[],y[][];
         /*Declaration of variable to store the pivot element and other variables to store the spacing of points*/
         double pivot=0,h,space;
-	int n;         //Varaible to store the number of nodes required
+	int n;         //Variable to store the number of nodes required
 	boolean check=true;     
 	System.out.println("\nPlease enter number of nodes...\n");
 	n=sc.nextInt();      // accepting from the user the number of nodes to be inserted
@@ -134,7 +133,7 @@ public class BackwardDriver
 	x=new double[n];
 	y=new double[n][n];     
 	
-        /*Accepting the interpolationg points and the corresponding functional values*/
+        /*Accepting the interpolating points and the corresponding functional values*/
         
 	for(int i=0;i<n;i++)
 	{
@@ -165,7 +164,7 @@ public class BackwardDriver
         if(pivot<x[0] || pivot>x[n-1])  // condition to check if the user given point is an extrapolating point
 	{
             check=false;  // changing the value of the check variable to keep a note that an exception has taken place
-            System.out.println(x+" does not lies between ["+x[0]+","+x[n-1]+"]");
+            System.out.println(x+" does not lie between ["+x[0]+","+x[n-1]+"]");
             System.out.println("Please try again with correct values.");
             System.exit(1);
         }
@@ -181,5 +180,6 @@ public class BackwardDriver
 	{
             System.out.println("\nINHERENT ERROR.\n");    // there are some errors in the entered entries
 	}
+	sc.close();
     }    //End of main()
 }    //End of class

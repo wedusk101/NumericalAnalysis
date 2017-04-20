@@ -1,12 +1,12 @@
 package com.numerical;
 import java.util.Scanner;
 
-class BisectionMethod extends Polynomial
+public class BisectionMethod extends Polynomial
 {
 	
 	static final double EPSILON = 0.000006;	// EPSILON is the pre-specified accuracy
 	
-	void calcBisectionRoot()	// calculates the zeroes of a function using the Bisection method
+	public void calcBisectionRoot()	// calculates the zeroes of a function using the Bisection method
 	{
 		double  leftInterval = 0.0, rightInterval = 0.0, root = 0.0, k = 0.0;
 		Scanner in = new Scanner(System.in);
@@ -28,7 +28,7 @@ class BisectionMethod extends Polynomial
 		}
 		else
 			System.out.println("No real roots on this interval. OPERATION ABORTED.");
-		in.close();
+		//in.close();
 	}
  
 	double inputEval(double leftInterval)  // evaluates the value of a function at a given point 
@@ -37,11 +37,11 @@ class BisectionMethod extends Polynomial
 	}
 }
 
-class Bisection                    
+/*public class Bisection // for testing                    
 {
 	public static void main(String args[])
 	{
 		BisectionMethod obj = new BisectionMethod();
 		obj.calcBisectionRoot();
 	}
-} // end
+} // end*/

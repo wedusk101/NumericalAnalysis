@@ -1,12 +1,12 @@
 package com.numerical;
 import java.util.Scanner;
 
-class RegulaFalsiMethod extends Polynomial
+public class RegulaFalsiMethod extends Polynomial
 {
 	
     static final double EPSILON = 0.000006;	// EPSILON is the pre-specified accuracy
 	
-    void calcFalseRoot()	// calculates the zeroes of a function using the Bisection method
+    public void calcFalseRoot()	// calculates the zeroes of a function using the Bisection method
     {
 	double  leftInterval = 0.0, rightInterval = 0.0, root = 0.0, k = 0.0, fb = 0.0 , fa=0.0;
 	Scanner in = new Scanner(System.in);
@@ -37,7 +37,7 @@ class RegulaFalsiMethod extends Polynomial
 	}
 	else
             System.out.println("No real roots on this interval. OPERATION ABORTED.");
-	in.close();
+	//in.close();
     }
  
     double inputEval(double leftInterval)  // evaluates the value of a function at a given point 
@@ -46,7 +46,7 @@ class RegulaFalsiMethod extends Polynomial
     }
 }
 
-class RegulaFalsi                    
+/*class RegulaFalsi  // for testing                  
 {
     public static void main(String args[])
     {
@@ -54,3 +54,5 @@ class RegulaFalsi
         obj.calcFalseRoot();
     }
 } // end
+*/
+
