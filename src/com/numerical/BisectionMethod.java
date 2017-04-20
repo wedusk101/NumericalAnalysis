@@ -28,7 +28,6 @@ public class BisectionMethod extends Polynomial
 		}
 		else
 			System.out.println("No real roots on this interval. OPERATION ABORTED.");
-		//in.close();
 	}
  
 	double inputEval(double leftInterval)  // evaluates the value of a function at a given point 
