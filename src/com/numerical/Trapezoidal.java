@@ -17,7 +17,7 @@ public class Trapezoidal extends Polynomial
 		
 	                fb=inputEval(rightInterval);    //value of function at the point of right interval
 	                fa=inputEval(leftInterval);     //value of function at the point of left interval
-	                interval=rightInterval-leftInterval/N;
+	                interval=(rightInterval-leftInterval)/N;
 	                sum = fb + fa;    //calculating 1st and last means y0 and yn
 	                for (double xh = leftInterval+interval; xh < rightInterval; xh=xh+interval) 
 	                {
