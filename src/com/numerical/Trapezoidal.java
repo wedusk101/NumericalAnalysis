@@ -26,7 +26,7 @@ public class Trapezoidal extends Polynomial
 	                }
 	                double Area=(interval/2)*sum;
 	                System.out.println("The Area="+Area);
-	                in.close();
+	              
 	}
 	            
 	            double inputEval(double leftInterval)  // evaluates the value of a function at a given point 
