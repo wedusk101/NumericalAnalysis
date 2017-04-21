@@ -6,7 +6,7 @@ public class RegulaFalsiMethod extends Polynomial
 	
     static final double EPSILON = 0.000006;	// EPSILON is the pre-specified accuracy
 	
-    public void calcFalseRoot()	// calculates the zeroes of a function using the Bisection method
+    public void calcFalseRoot()	// calculates the zeroes of a function using the Regula Falsi method
     {
 	double  leftInterval = 0.0, rightInterval = 0.0, root = 0.0, k = 0.0, fb = 0.0 , fa=0.0;
 	Scanner in = new Scanner(System.in);
