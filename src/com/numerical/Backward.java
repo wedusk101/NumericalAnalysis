@@ -1,9 +1,7 @@
 package com.numerical;
-import java.util.Scanner; /*importing the Scanner class of the 'util' package to accept necessary inputs from the user*/
+import java.util.Scanner; 
 
-
-
-class Backward
+public class Backward
 {
     double x[];     // array to hold interpolating points
     double y[][];   // two-dimensional array to hold the functional values of the interpolating polynomial
@@ -27,7 +25,7 @@ class Backward
             x=new double[n];
             y=new double[n][n];
         
-            /*Accepting the interpolationg points and the corresponding functional values*/
+            /*Accepting the interpolating points and the corresponding functional values*/
         
             for(int i=0;i<n;i++)
             {
@@ -59,7 +57,7 @@ class Backward
         
             if(pivot<x[0] || pivot>x[n-1])
             {
-                System.out.println(x+" does not lies between ["+x[0]+","+x[n-1]+"]");
+                System.out.println("The value of x does not lie between ["+x[0]+","+x[n-1]+"]");
                 System.out.println("Please try again with correct values.");
                 System.exit(1);
             }
@@ -161,16 +159,12 @@ class Backward
 	System.out.print("\n\n f("+pivot+")=");
         System.out.printf("%.5f.",sum);    // printing sum	
     }   // end of method
-}
-
-/* For testing*//*
-class MainBackward
-{
-    public static void main(String[] args)     // start of main 
+    
+    /*public static void main(String[] args)     // for testing
     {   
 	Backward obj=new Backward();
         obj.backwardCal();
         
         
-    }    //End of main()
+    }    //End of main()*/
 }    //End of class*/
