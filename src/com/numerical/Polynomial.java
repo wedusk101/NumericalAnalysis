@@ -28,6 +28,7 @@ public class Polynomial
 		getDegree();      
         coef = new int[deg + 1];
         getCoef();
+        polyDisplay();
     }
 
 	public static double polyEval(double x)
@@ -37,13 +38,29 @@ public class Polynomial
 			result = coef[i] + (x * result);
 		return result;
 	}
-
-	/*public static void main(String[] args) //for testing
+	
+	public void polyDisplay()
+	{
+		System.out.println("The polynomial you have entered is :");
+		for(int i = deg; i >= 0; i--)
+		{
+			if(coef[i] == 0)
+				continue;
+			if(i == 0)
+			{
+				System.out.print(coef[i] + "x^" + i);
+				break;
+			}
+			System.out.print(coef[i] + "x^" + i + " + ");
+		}
+		System.out.println();
+	}
+    
+	public static void main(String[] args) //for testing
 	{
 		Polynomial p1;
 		p1=new Polynomial();
 		double c = p1.polyEval(2);
 		System.out.println(c);
-
-	}*/
+	}
 }
