@@ -43,15 +43,13 @@ public class RegulaFalsiMethod extends Polynomial
     {
         return polyEval(leftInterval);
     }
-}
 
-/*class RegulaFalsi  // for testing                  
-{
-    public static void main(String args[])
+    /*public static void main(String args[]) // for testing
     {
         RegulaFalsiMethod obj = new RegulaFalsiMethod();
         obj.calcFalseRoot();
-    }
+    }*/
 } // end
-*/
+
+
 

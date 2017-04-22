@@ -34,13 +34,10 @@ public class BisectionMethod extends Polynomial
 	{
 	   return polyEval(leftInterval);
 	}
-}
-
-/*public class Bisection // for testing                    
-{
-	public static void main(String args[])
+     
+	/*public static void main(String args[]) // for testing
 	{
 		BisectionMethod obj = new BisectionMethod();
 		obj.calcBisectionRoot();
-	}
+	}*/
 } // end*/
