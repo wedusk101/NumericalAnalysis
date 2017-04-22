@@ -16,7 +16,9 @@
 	Implementation Details
 	----------------------
 	
-	INPUT - y = f(x) continuous on	[a, b]				OUTPUT - Value of x such that f(x) = 0
+	INPUT - y = f(x) continuous on	[a, b]
+
+	OUTPUT - Value of x such that f(x) = 0
 	
 	The Regula Falsi Method algorithm takes a polynomial as input from the user along with a closed interval [a, b] where
 	the user suspects the root could lie. The two points of the interval are used for evaluating f(x) such that either
