@@ -1,4 +1,4 @@
-//package com.numerical;
+package com.numerical;
 import java.util.Scanner;
 
 public class Polynomial 
