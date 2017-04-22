@@ -1,0 +1,25 @@
+import Simpson.*;
+import java.util.Scanner;
+
+public class SimpsonDriver 
+{
+	public static void main(String[] argv)
+	{
+	    
+	   Scanner s = new Scanner(System.in);
+		System.out.println("Enter the expresion:");
+		String str=s.nextLine();
+		System.out.println("Enter the value of a:");
+		double a=s.nextDouble();
+		System.out.println("Enter the value of b:");
+		double b=s.nextDouble();
+		System.out.println("Enter the value of n:");
+		int n=s.nextInt();
+    if(a<b)
+      a=(a+b)-(b=a);
+		Simpson simp=new Simpson();
+		double d=Simpson.SimpsonsRule(a,b,str,n);
+		System.out.println("\nResult="+d+".\n");
+	  s.close();
+  }
+}
