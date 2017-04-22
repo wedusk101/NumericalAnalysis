@@ -26,25 +26,25 @@ public class Polynomial
 	public Polynomial()
 	{
 		getDegree();      
-        coef = new int[deg + 1];
-        getCoef();
-        polyDisplay();
-    }
+                coef = new int[deg + 1];
+                getCoef();
+                polyDisplay();
+        }
 
 	public static double polyEval(double x)
 	{
 		double result = 0;
 		for (int i = coef.length-1; i >= 0; i--)
-			result = coef[i] + (x * result);
+	            result = coef[i] + (x * result);
 		return result;
 	}
 	public static double polyDerivEval(double x)
-    {
-        double result = 0;
-        for (int i = coef.length-1; i > 0; i--)
-            result = result+i*coef[i]*Math.pow(x,i-1);
-        return result;
-    }
+        {
+                double result = 0;
+                for (int i = coef.length-1; i > 0; i--)
+                    result = result+i*coef[i]*Math.pow(x,i-1);
+                return result;
+        }
 	
 	public void polyDisplay()
 	{
@@ -68,7 +68,7 @@ public class Polynomial
 		Polynomial p1;
 		p1=new Polynomial();
 		double c = p1.polyEval(2);
-        double d = p1.polyDerivEval(2);
+                double d = p1.polyDerivEval(2);
 		System.out.println(c);
 		System.out.println(d);
 	}
