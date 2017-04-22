@@ -1,3 +1,36 @@
+/********************************************************************************************************************** 	
+	The following code implements the Regula Falsi Method for finding true zeroes of polynomials. It is implemented as a
+	part of the	java package "com.numerical" where there are a few other root finding methods. This piece of code has
+	the following components and dependencies.
+	
+ 	Polynomial - Superclass - This class creates a polynomial object which the user inputs as parameter for the program.
+	
+	calcFalseRoot() - Returns void - Used for calculating the actual root of the given polynomial.
+	
+	inputEval() - Returns double - Used for calculating the value of the polynomial at a particular point. Here it is 
+	implemented by calling the method polyEval() from the Polynomial superclass which actually evaluates the value of
+	the given polynomial.
+	
+	main() - Returns void - Provided for testing the code. Commented out over here.
+	
+	Implementation Details
+	----------------------
+	
+	INPUT - y = f(x) continuous on	[a, b]				OUTPUT - Value of x such that f(x) = 0
+	
+	The Regula Falsi Method algorithm takes a polynomial as input from the user along with a closed interval [a, b] where
+	the user suspects the root could lie. The two points of the interval are used for evaluating f(x) such that either
+	f(a) or f(b) is negative. This means the function changes sign on the interval implying the presence of a root
+	somewhere on the interval. However, this will be true IF AND ONLY IF the function is CONTINUOUS on the closed interval.
+	Since, this a bracketed method, it is guaranteed to converge even if it takes a large number of iterations.Unlike Bisection
+	method instead of bisecting the interval, we find where the chord joining the boundary points of the interval meet the 
+	X axis. The roots are then calculated using the equation of the chord.The rate of convergence is still linear but faster
+	than that of the bisection method in some cases.It's sign is checked and the new interval is appropriately updated such 
+	that the bracketing property is preserved.
+	The program stops executing once the absolute difference between the left and right intervals falls below a 
+	pre-specified value, here given by EPSILON which is equal to 6 x 10e-6.
+	
+**********************************************************************************************************************/
 package com.numerical;
 import java.util.Scanner;
 
