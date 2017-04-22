@@ -27,10 +27,11 @@ public class Simpson extends Polynomial
         	fx=inputEval(xh);		//incrementing value of x with respect to h  
             sum=sum+(2*fx);       //calculating sum from y2,y4,y6 and so on
         }
-        double Area=(interval/3)*sum;
-        System.out.println("The Area="+Area);
+        double area = (interval/3)*sum;
+        System.out.println("The Area is " + area + " square units.");
         
 	}
+	
 	 double inputEval(double leftInterval)  // evaluates the value of a function at a given point 
      {
          return Polynomial.polyEval(leftInterval);
