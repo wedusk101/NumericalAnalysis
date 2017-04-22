@@ -37,7 +37,8 @@
 	|	5	|	8	|	-3	|	7	|  -6  | <---------Coefficients
 	
 	So the resulting polynomial is  5x^4 + 8x^3 - 3x^2 + 7x - 6 .
-	The polyDisplay() method ignores the terms where the coefficient is zero and hence doesn't display them.    	
+	The polyDisplay() method ignores the terms where the coefficient is zero and hence doesn't display them.
+	    	
 **********************************************************************************************************************/
 
 
