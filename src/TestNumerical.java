@@ -7,11 +7,10 @@ public class TestNumerical {
 		Scanner in = new Scanner(System.in); // this is just to test the successful creation of a Scanner class object
 		System.out.println("Please enter your name.");
 		String name = in.nextLine();
-		//in.nextLine();
 		System.out.println("Name is " + name);
 		System.out.println("Regula Falsi Method");
-		//RegulaFalsiMethod rf = new RegulaFalsiMethod();
-		//rf.calcFalseRoot();
+		RegulaFalsiMethod rf = new RegulaFalsiMethod();
+		rf.calcFalseRoot();
 		System.out.println("Bisection Method");
 		BisectionMethod obj = new BisectionMethod();
 		obj.calcBisectionRoot();
