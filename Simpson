@@ -1,0 +1,183 @@
+package Simpson;
+
+public class Simpson 
+{	
+	public Simpson()
+	{
+	          // default constructor
+	}
+	public static double eval(final String str) 
+	{
+	    return new Object() 
+	    {
+	        int pos = -1, ch;
+
+	        void nextChar() 
+	        {
+	            ch = (++pos < str.length()) ? str.charAt(pos) : -1;
+	        }
+
+	        boolean eat(int charToEat) 
+	        {
+	            while (ch == ' ') nextChar();
+	            if (ch == charToEat) {
+	                nextChar();
+	                return true;
+	            }
+	            return false;
+	        }
+
+	        double parse() 
+	        {
+	            nextChar();
+	            double x = parseExpression();
+	            if (pos < str.length()) throw new RuntimeException("Unexpected: " + (char)ch);
+	            return x;
+	        }
+
+	        // Grammar:
+	        // expression = term | expression `+` term | expression `-` term
+	        // term = factor | term `*` factor | term `/` factor
+	        // factor = `+` factor | `-` factor | `(` expression `)`
+	        //        | number | functionName factor | factor `^` factor
+
+	        double parseExpression() 
+	        {
+	            double x = parseTerm();
+	            for (;;) {
+	                if      (eat('+')) x += parseTerm(); // addition
+	                else if (eat('-')) x -= parseTerm(); // subtraction
+	                else return x;
+	        }
+	    }
+
+	    double parseTerm() 
+	    {
+	            double x = parseFactor();
+	            for (;;) 
+	            {
+	                if      (eat('*')) x *= parseFactor(); // multiplication
+	                else if (eat('/')) x /= parseFactor(); // division
+	                else return x;
+	            }
+	   }
+
+	   double parseFactor() 
+	   {
+	            if (eat('+')) return parseFactor(); // unary plus
+	            if (eat('-')) return -parseFactor(); // unary minus
+
+	            double x;
+	            int startPos = this.pos;
+	            if (eat('(')) 
+	            { // parentheses
+	                x = parseExpression();
+	                eat(')');
+	            } 
+	            else if ((ch >= '0' && ch <= '9') || ch == '.') 
+	            { // numbers
+	                while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
+	                x = Double.parseDouble(str.substring(startPos, this.pos));
+	            }
+	            else if (ch >= 'a' && ch <= 'z') 
+	            { // functions
+	                while (ch >= 'a' && ch <= 'z') nextChar();
+	                String func = str.substring(startPos, this.pos);
+	                x = parseFactor();
+	                if (func.equals("sqrt")) x = Math.sqrt(x);
+	                else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
+	                else if (func.equals("cos")) x = Math.cos(Math.toRadians(x));
+	                else if (func.equals("tan")) x = Math.tan(Math.toRadians(x));
+	                else throw new RuntimeException("Unknown function: " + func);
+	            } 
+	            else 
+	            {
+	                throw new RuntimeException("Unexpected: " + (char)ch);
+	            }
+
+	            if (eat('^')) x = Math.pow(x, parseFactor()); // exponentiation
+
+	            return x;
+	        }
+	    }.parse();
+	}
+
+	 // Simpson's rule - Approximates the definite integral of f from a to b.
+	 public static double SimpsonsRule(double a, double b, String str, int n) 
+	 {
+	    double simpson, dx, x, sum4x, sum2x;
+	    x=a;
+	    dx = (b-a) / n;
+	    sum4x = 0.0;
+	    sum2x = 0.0;
+
+	    for(int i=0;i<(n-1);i++)
+	    {
+	    	x=x+dx;
+	    	String strX=str.replace("x", ""+x);
+	    	if(i%2==0)
+	    	{
+	    		sum4x+=eval(strX);
+	    	}
+	    	else
+	    	{
+	    		sum2x+=eval(strX);
+	    	}
+	    }
+	    //System.out.println("sum2x="+sum2x);	
+	    //System.out.println("sum4x="+sum4x);	    
+	    /*
+	    // 4/3 terms
+	    for (int i = 1; i < n; i += 2) {
+	        x = a + i * dx;
+	        String strX=str.replace("x", ""+x);
+	        sum4x += eval(strX);
+	    }
+
+	    // 2/3 terms
+	    for (int i = 2; i < n-1; i += 2) {
+	        x = a + i * dx;
+	        String strX=str.replace("x", ""+x);
+	        sum2x += eval(strX);
+	    }
+			*/
+	    // Compute the integral approximation.
+	    String strX=str.replace("x", ""+a);
+	    simpson = eval(strX);
+	    strX=str.replace("x", ""+b);
+	    simpson+= eval(strX);
+	    simpson = (dx / 3)*(simpson + 4 * sum4x + 2 * sum2x);
+	    //System.out.println("simpson="+simpson);
+	    return simpson;
+	}
+
+	// Handles the error for for f(x) = t^s * sech(t)^2. The integration is
+	// done from 0 to 100.
+	// Stop Simspson's Method when the relative error is less than 1 * 10^-6
+	/*public static double SimpsonError(double a, double b, String s, int n)
+	{
+	    double futureVal;
+	    double absError = 1.0;
+	    double finalValueOfN;
+	    double numberOfIterations = 0.0;
+	    double currentVal = SimpsonsRule(a,b,s,n);
+
+	    while (absError / currentVal > 0.000001) {
+	        n = 2*n;
+	        futureVal = SimpsonsRule(a,b,s,n);
+	        absError = Math.abs(futureVal - currentVal) / 15;
+	        currentVal = futureVal;
+	    }
+
+	    // Find the number of iterations. N starts at 8 and doubles every iteration.
+	    finalValueOfN = n / 8;
+	    while (finalValueOfN % 2 == 0) {
+	        finalValueOfN = finalValueOfN / 2;
+	        numberOfIterations++;
+	    }
+	    System.out.println("The number of iterations is " + numberOfIterations + ".");
+	    return currentVal;
+	}*/
+	
+
+}
