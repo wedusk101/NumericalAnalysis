@@ -79,7 +79,7 @@ public class Forward
             /*Condition to check if the user given point is an extrapolating point*/
             if(pivot<x[0] || pivot>x[n-1])
             {
-                System.out.println(pivot+" does not lies between ["+x[0]+","+x[n-1]+"]");
+                System.out.println("The value of x "+pivot+" does not lies between ["+x[0]+","+x[n-1]+"]");
                 System.out.println("Please try again with correct values.");
                 System.exit(1);
             }
