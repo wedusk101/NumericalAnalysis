@@ -22,9 +22,11 @@
     OUTPUT - area enclosed by the Polynomial function in sq. units
  
     The Simpson's 1/3rd Rule algorithm takes a polynomial as input from the user along with a closed interval [a, b]
-    and works by 
+    and works by approximating the area under a curve by diving it into a series of parabolas. Three points are chosen through 
+	which a curve is fit which is represented by a quadratic polynomial. The smaller the step size, the better the approximation
+	of the integral. The set of curves thus formed approximate the original polynomial that is input by the user.
     
-******************************************************************************************************************************/
+********************************************************************************************************************************/
 package com.numerical;
 
 import java.util.Scanner;
