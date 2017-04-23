@@ -1,6 +1,6 @@
 
-/****************************************************************************** 
-    The following code implements the Trapezoidal Rule which Numerically integrates a function in the interval [a, b] and 
+/****************************************************************************************************************************** 
+    The following code implements the Trapezoidal Rule which numerically integrates a function in the interval [a, b] and 
     calculates the area enclosed by it.It is implemented as a part of the java package "com.numerical" where there is another
     method known as Simpson's 1/3rd rule that also serves the same purpose. This piece of code has the following components
     and dependencies.
@@ -18,7 +18,7 @@
     Implementation Details
     ----------------------
     
-    INPUT - y = f(x) continuous on	[a, b]
+    INPUT - y = f(x) continuous on [a, b]
 	
     OUTPUT - area enclosed by the Polynomial function in sq. units
  
@@ -27,7 +27,7 @@
     The trapezoidal rule has faster convergence in general than Simpson's rule,the accuracy of this rule depends on the 
     No. of intervals,No. of intervals is the No. of trapezoids in which the area under under the curve is divided. 
     
-******************************************************************************/
+******************************************************************************************************************************/
 package com.numerical;
 
 import java.util.Scanner;
