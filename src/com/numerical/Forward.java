@@ -185,8 +185,6 @@ public class Forward
 	}  // end of outer loop
 	System.out.println("\n\n f("+pivot+")="+sum+".");    // printing sum	
     }   // end of method
-//}
-
 }
 
 /*For Testing*/
@@ -194,6 +192,4 @@ public class Forward
     {        
         Forward fwd=new Forward();
         fwd.forwardCal();
-    }
-
-}*/
+    }*/
