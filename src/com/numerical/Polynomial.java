@@ -79,7 +79,7 @@ public class Polynomial
 	{
 		double result = 0;
 		for (int i = coef.length-1; i >= 0; i--)
-	            result = coef[i] + (x * result);
+			result = coef[i] + (x * result);
 		return result;
 	}
 	public static double polyDerivEval(double x)
