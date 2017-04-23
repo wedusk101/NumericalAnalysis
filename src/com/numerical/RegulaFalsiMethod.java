@@ -28,9 +28,9 @@
 	method instead of bisecting the interval, we find where the chord joining the boundary points of the interval meet the 
 	X axis. The roots are then calculated using the equation of the chord.The rate of convergence is still linear but faster
 	than that of the bisection method in some cases.It's sign is checked and the new interval is appropriately updated such 
-	that the bracketing property is preserved.
-	The program stops executing once the absolute difference between the left and right intervals falls below a 
-	pre-specified value, here given by EPSILON which is equal to 6 x 10e-6.
+	that the bracketing property is preserved.The program stops executing once the absolute difference between
+	the left and right intervals falls below a pre-specified value, here given by EPSILON which is 
+	equal to 6 x 10e-6.
 	
 **********************************************************************************************************************/
 package com.numerical;
