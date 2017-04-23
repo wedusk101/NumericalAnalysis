@@ -56,11 +56,11 @@ public class NewtonRaphsonMethod extends Polynomial
         return polyDerivEval(result);
     }
      
-	public static void main(String args[]) // for testing
+	/*public static void main(String args[]) // for testing
 	{
 		NewtonRaphsonMethod obj = new NewtonRaphsonMethod();
 		obj.calcNewtonRaphsonRoot();
-	}
+	}*/
 }
 
 
