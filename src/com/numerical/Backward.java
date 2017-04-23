@@ -1,3 +1,24 @@
+/********************************************************************************************************************** 	
+    The following code implements the Newton Backward Interpolation. It is implemented as apart of the java package "com.numerical" 
+    This piece of code has the following components and dependencies.
+	
+    inputParameters() - Returns void - This method is used by the user to input the parameters
+	
+    differencesCal() - Returns void - 
+    
+    showDifferences() - Returns void -  
+    
+    fact() - Returns integer - This method is used to calculate factorial of a number recursively.
+     
+    backwardCal() - Returns void -  
+     
+    main() - Returns void - Provided for testing the code. Commented out over here.
+	
+    Implementation Details
+    ----------------------
+	
+	
+**********************************************************************************************************************/
 package com.numerical;
 import java.util.Scanner; 
 
