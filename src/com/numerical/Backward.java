@@ -4,18 +4,28 @@
 	
     inputParameters() - Returns void - This method is used by the user to input the parameters
 	
-    differencesCal() - Returns void - 
+    differencesCal() - Returns void - Calculates the difference table values.
     
-    showDifferences() - Returns void -  
+    showDifferences() - Returns void -  Displays the difference table.
     
     fact() - Returns integer - This method is used to calculate factorial of a number recursively.
      
-    backwardCal() - Returns void -  
+    backwardCal() - Returns void -  Calculates the value of the function at the pivot using forward interpolation.
      
     main() - Returns void - Provided for testing the code. Commented out over here.
 	
     Implementation Details
     ----------------------
+		
+	The method of Backward Interpolation is used to find the value of a function at a point lying between two extreme
+	points. This process is known as interpolation. In this piece of code, the user inputs a series of points and the
+	respective value of the function at that point as a tuple (x, y). Each such tuple is called a node. The x values
+	must be equally spaced for this method to work. The point at which the function is to be interpolated is called
+	the pivot. The pivot MUST lie within the closed interval [a, b] where the function is continuous. Otherwise the
+	process will fail. 	The backward difference method is used to calculate the value of a function near the end 
+	of a table of values. The finite difference table is basically the discrete analog of the derivative that is 
+	imperativefor the approximation of the function. If there are n nodes, the resulting polynomial will have degree
+	n - 1 that will describe the function.
 	
 	
 **********************************************************************************************************************/

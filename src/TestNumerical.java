@@ -1,3 +1,5 @@
+/*The following code is for testing the numerical package by the user only.*/
+
 import com.numerical.*;
 import java.util.Scanner;
 public class TestNumerical {

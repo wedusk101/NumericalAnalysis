@@ -81,12 +81,13 @@
 	----------
 	
 	The implementation details and data dictionary is present as documentation in the source file for each module.
-	We hope the user finds this piece of software useful. Any suggestions or bugs may be reported to either of the following email
-	addresses:
+	THE USER IS SUPPOSED TO CREATE AN OBJECT OF THE CLASS THEY IMPORT AND CALL THE DESIRED FUNCTION. The rest of the functionality 
+	is abstracted by the package.We hope the user finds this piece of software useful.
+	Any suggestions or bugs may be sent to either of the following email addresses:
 	
 	arihantseraogi@gmail.com
 	coder.speed09@gmail.com
 	vishalsuniagarwal@gmail.com
 	
-	Copyright (C) 2017 Heritage Institute of Technology, Computer Applications Centre, Kolkata, West Bengal - 700107
+	Copyright (C) 2017 Heritage Institute of Technology, Computer Applications Center, Kolkata, West Bengal - 700107
 	
