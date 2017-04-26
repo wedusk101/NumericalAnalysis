@@ -112,7 +112,7 @@ public class Polynomial
 		System.out.println();
 	}
     
-	public static void main(String[] args) //for testing
+	/*public static void main(String[] args) //for testing
 	{
 		Polynomial p1;
 		p1=new Polynomial();
@@ -120,5 +120,5 @@ public class Polynomial
         double d = p1.polyDerivEval(2);
 		System.out.println(c);
 		System.out.println(d);
-	}
+	}*/
 }
