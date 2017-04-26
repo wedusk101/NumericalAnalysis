@@ -95,19 +95,24 @@ public class Polynomial
 		System.out.println("The polynomial you have entered is :");
 		for(int i = deg; i >= 0; i--)
 		{
-			if(coef[i] == 0)
-				continue; // ignores zero coefficients
-			if(i == 0)
+			if(i == 0 && coef[i] == 0)
 			{
-				System.out.print(coef[i] + "x^" + i);
+				System.out.print(0);
 				break; // checks if the current term is the last term to avoid appending the "+" to it 
 			}
+			if(i == 0)
+			{
+				System.out.print(coef[i]);
+				break; // checks if the current term is the last term to avoid appending the "+" to it 
+			}
+			if(coef[i] == 0)
+				continue; // ignores zero coefficients
 			System.out.print(coef[i] + "x^" + i + " + ");
 		}
 		System.out.println();
 	}
     
-	/*public static void main(String[] args) //for testing
+	public static void main(String[] args) //for testing
 	{
 		Polynomial p1;
 		p1=new Polynomial();
@@ -115,5 +120,5 @@ public class Polynomial
         double d = p1.polyDerivEval(2);
 		System.out.println(c);
 		System.out.println(d);
-	}*/
+	}
 }
