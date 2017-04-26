@@ -1,0 +1,92 @@
+
+	License Information
+	-------------------
+
+	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  
+    This program is distributed in the hope that it will be useful. It is given to you, hereafter referred to as the "user", "AS IS",
+	i.e. WITHOUT ANY WARRANTY, implied or otherwise, without even the warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    As such we, hereafter referred to as the "authors" will not be held liable for any damages whatsoever, direct or consequential resulting
+	from the use of the said piece of software by the user. On using the "package" you hereby agree to indemnify the author(s) against
+    any and all such claims. Please see the GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+	
+	
+	Package Overview and included Modules
+	----------------------------------------
+	
+	The package "com.numerical" has been designed to be of use to the user for purposes of various numerical analysis calculations.
+	It has the following modules:
+	
+	Interpolation Methods
+	---------------------
+	
+	Backward Interpolation - Used to find out the value of a function at a point within a set of points near the rightmost abscissa.
+	
+	Forward Interpolation - Used to find out the value of a function at a point within a set of points near the leftmost abscissa.
+	
+	Root Finding Methods
+	--------------------
+	
+	Bisection Method -  Used to find the real roots of a polynomial within a given closed interval where the polynomial	is continuous.
+	This method of root finding is called a bracketed method since it encloses the root within an interval or bracket. This method is
+	guaranteed to cenverge once the initial conditions are fulfilled although it can be quite slow.
+						
+	Regula Falsi Method - This method is also used to find the real roots of a continuous polynomial. It is also known as the method
+	of false position. For this method, the user needs to know the approximate location of the root in an interval (a,b) where the 
+	function is continuous. Hence, this method is also known as a bracketed method. It is also guaranteed to converge.
+	
+	Newton Raphson Method - This method of root finding works on the idea that if a function is both continuos and continously differentiable,
+	then its tangent will intersect with the x - axis. With each iteration, this point of intersection will get close to the real root until
+	eventually the method converges. However, this  method has a few drawbacks. First and foremost, it is NOT guaranteed to converge since
+	it is not a bracketed method. Secondly, the value of the derivative of the function needs to be calculated for this method to work.
+	Furthermore, if the inital guess of the root is too far away from the truw zero, the method may not converge at all. This means the user
+	needs tp have some idea about the nature of the function and hence the location of the root. Also, there could be such functions where 
+	the method will not converge and may go into an infinite loop because of the inherent nature of the function.
+	
+	Numerical Integration Methods
+	-----------------------------
+	
+	Trapezoidal Rule - This method of numerical integration is based upon the idea that the area under a curve can be approximated by
+	subdividing the area into many small trapezoids each of a very small width h(say). The closed interval of integration [a, b] is divided 
+	into n intervals and h = (b - a) / n . Consequently, the higher the number of intervals, the greater the accuracy of the result. It has 
+	to be noted that this method will only work if the function is continous on the closed interval [a, b].
+	
+	Simpson's 1/3rd Rule - This algorithm takes a continous function as input from the user along with a closed interval [a, b]
+    and works by approximating the area under the curve by diving it into a series of parabolas. Three points are chosen through 
+	which a curve is fit which is represented by a quadratic polynomial. The smaller the step size, the better the approximation
+	of the integral. The set of curves thus formed approximate the original polynomial that is input by the user. Again, the method will
+	only work if and only iff the function is continous over the closed interval [a, b].
+	
+	Polynomial Module
+	-----------------
+	
+	This class is arguably the most important module of the package since most modules are directly dependent on it. It takes from the user
+	the input for a polyynomial and returns it for further calculations.
+	The dependents  of the Polynomial class are:
+	
+	Bisection Method Module 
+	Regula Falsi Module
+	Trapezoidal Rule Module
+	Simpson's 1/3rd Rule Module
+	
+	The aforementioned classes all extend the Polynomial class for their input functionality and for the purposes of evaluating the value of
+	particular polynomial at a given point.
+	
+	
+	Conclusion
+	----------
+	
+	The implementation details and data dictionary is present as documentation in the source file for each module.
+	We hope the user finds this piece of software useful. Any suggestions or bugs may be reported to either of the following email
+	addresses:
+	
+	arihantseraogi@gmail.com
+	coder.speed09@gmail.com
+	vishalsuniagarwal@gmail.com
+	
+	Copyright (C) 2017 Heritage Institute of Technology, Computer Applications Centre, Kolkata, West Bengal - 700107
+	
