@@ -39,7 +39,7 @@ Constants and Transcendental Numbers
 
 Taylor and Maclaurin Expansions (Depends on calcDerivative)
 Important mathematical constants could be used from the java Math class.
-e.g. e, pi, phi, tao.
+e.g. e, pi, phi, tau etc.
 
 Differential Equations
 ----------------------
