@@ -56,16 +56,16 @@
 	to be noted that this method will only work if the function is continuous on the closed interval [a, b].
 	
 	Simpson's 1/3rd Rule - This algorithm takes a continuous function as input from the user along with a closed interval [a, b]
-    and works by approximating the area under the curve by diving it into a series of parabolas. Three points are chosen through 
+    and works by approximating the area under the curve by dividing it into a series of parabolas. Three points are chosen through 
 	which a curve is fit which is represented by a quadratic polynomial. The smaller the step size, the better the approximation
 	of the integral. The set of curves thus formed approximate the original polynomial that is input by the user. Again, the method will
-	only work if and only iff the function is continuous over the closed interval [a, b].
+	only work if and only if the function is continuous over the closed interval [a, b].
 	
 	Polynomial Module
 	-----------------
 	
 	This class is arguably the most important module of the package since most modules are directly dependent on it. It takes from the user
-	the input for a polyynomial and returns it for further calculations.
+	the input for a polynomial and returns it for further calculations.
 	The dependents  of the Polynomial class are:
 	
 	Bisection Method Module 
