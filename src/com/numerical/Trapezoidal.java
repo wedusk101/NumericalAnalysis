@@ -55,7 +55,7 @@ public class Trapezoidal extends Polynomial
 	                	fx=inputEval(xh);		//incrementing value of x with respect to h  
 	                     sum=sum+(2*fx);       //calculating sum from y1 to y(n-1)
 	                }
-	                double area = (interval/3)*sum;
+	                double area = (interval/2)*sum;
 	                System.out.println("The Area is " + area + " square units.");
 	              
 	}
