@@ -17,7 +17,6 @@
 	----------------------
 	
 	INPUT - y = f(x) continuous on	[a, b]
-
 	OUTPUT - Value of x such that f(x) = 0
 	
 	The Regula Falsi Method algorithm takes a polynomial as input from the user along with a closed interval [a, b] where
@@ -60,13 +59,15 @@ public class RegulaFalsiMethod extends Polynomial
                 */
                 
                 root = fb/(fb-fa);
-	        root = root*(rightInterval-leftInterval);
+	            root = root*(rightInterval-leftInterval);
                 root = rightInterval - root;
                 k = inputEval(root); // k is the intermediate value of the function at the point of intersection of secant line
-                if(fb * k < 0)
-                    leftInterval = root;
-                else
+                if(fa*fb < 0)
                     rightInterval = root;
+                else if (fa*fb > 0)
+                    leftInterval = root;
+				else
+				    break;
             }
             System.out.println("The real root in the specified interval is: " + root);      
 	}
@@ -84,7 +85,4 @@ public class RegulaFalsiMethod extends Polynomial
         RegulaFalsiMethod obj = new RegulaFalsiMethod();
         obj.calcFalseRoot();
     }*/
-} // end
-
-
-
+} // end           
