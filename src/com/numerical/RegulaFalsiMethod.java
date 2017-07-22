@@ -66,8 +66,8 @@ public class RegulaFalsiMethod extends Polynomial
                     rightInterval = root;
                 else if (fa*fb > 0)
                     leftInterval = root;
-				else
-				    break;
+		else
+		    break;
             }
             System.out.println("The real root in the specified interval is: " + root);      
 	}
