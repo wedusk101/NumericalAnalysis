@@ -24,7 +24,7 @@
 	the pivot. The pivot MUST lie within the closed interval [a, b] where the function is continuous. Otherwise the
 	process will fail. 	The backward difference method is used to calculate the value of a function near the end 
 	of a table of values. The finite difference table is basically the discrete analog of the derivative that is 
-	imperativefor the approximation of the function. If there are n nodes, the resulting polynomial will have degree
+	imperative for the approximation of the function. If there are n nodes, the resulting polynomial will have degree
 	n - 1 that will describe the function.
 	
 	
