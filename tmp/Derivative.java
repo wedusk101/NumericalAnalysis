@@ -1,5 +1,5 @@
 /*The following code calculates the derivative of a function 
-at a point froms ab initio or first principle*/
+at a point from ab initio or first principle*/
 import java.util.Scanner;
 class Derivative
 {
