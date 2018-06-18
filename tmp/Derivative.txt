@@ -10,7 +10,7 @@ public double calcDerivative(String func, String op, double var, double val);
 
 This is the prototype of the method. Instead of passing the function method as a parameter, we parse the original
 expression and generate string inputs for the calcDerivative method.For e.g. to find out the derivative of say a trigonometric
-function, we first need to classify it as a triginometric function and identify the variable on which the function will be
+function, we first need to classify it as a trigonometric function and identify the variable on which the function will be
 operating. <String func> will contain the class of function like trigonometric, polynomial etc. <String op> will contain the 
 actual operation from among that class of function like sine, cosine etc. <double var> will have the variable with respect to
 which we need to differentiate for e.g. x, y etc. Once we have the parameters we can further classify them and apply 
@@ -22,7 +22,7 @@ We will have a variable delta with a very small value that will help us in calcu
 
 
                                        f(x + dx) - f(x)
-The derivative:   Lim dx -> 0  f'(x) = ---------------- 
+The derivative:    f'(x) = Lim dx -> 0 ---------------- 
 									         dx
 Again, please let me know what you guys think and update or add a different file with your changes here.
 										
